@@ -1,0 +1,7 @@
+aws_region            = "<region>"
+vpc_cidr              = "<cidr>"
+public_subnets_cidrs  = ["<public1>"]
+private_subnets_cidrs = ["<private1>", "<private2>"]
+azs                   = ["<az1>", "<az2>"]
+master_username       = "<username>"
+master_password       = "<password>"
