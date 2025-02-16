@@ -1,5 +1,5 @@
 # Terraform AWS RDS with Bastion Host
-Terraform code to create an RDS MariaDB instance, allowing access only from you IP address through an EC2 instance bastion host.
+Terraform code to create an RDS MariaDB instance, allowing access only from your IP address through an EC2 instance bastion host.
 
 ### Requirements
 - [AWS Account](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)
@@ -31,3 +31,6 @@ Execute:
 ```bash
 terraform destroy
 ```
+
+### Architecture
+![diagram](data/diagram.png)
