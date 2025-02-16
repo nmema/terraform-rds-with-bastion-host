@@ -21,3 +21,24 @@ resource "aws_security_group" "bastion" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_security_group" "rds" {
+  name        = "RDSMariaDBSG"
+  description = "Allow access to RDS MariaDB"
+  vpc_id      = module.vpc.vpc_id
+
+  ingress {
+    description     = "MariaDB/Aurora MySQL"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
+    security_groups = [aws_security_group.bastion.id]
+  }
+
+  egress {
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
+    security_groups = [aws_security_group.bastion.id]
+  }
+}
