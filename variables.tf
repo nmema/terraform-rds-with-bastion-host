@@ -22,3 +22,13 @@ variable "azs" {
   type        = list(string)
   description = "Availability Zones"
 }
+
+variable "master_username" {
+  description = "Username for the Master User of Aurora DB"
+  type        = string
+}
+
+variable "master_password" {
+  description = "Password for the Master User of Aurora DB"
+  type        = string
+}
